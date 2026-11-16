@@ -1,5 +1,6 @@
 //Variables 
 const timeStamp = document.getElementById("timeStamp");
+const gif = document.querySelector('.gif');
 
 //Time Function
 function timeywimey(){
@@ -16,3 +17,10 @@ function timeywimey(){
 setInterval(timeywimey,1000);
 // End of Time
 
+//Attempt to fullscreen
+
+function full(){
+    gif.requestFullscreen();
+}
+
+gif.addEventListener("click", full);
