@@ -53,3 +53,8 @@ body{
     font-weight: bolder;
     font-size:large;
 }
+
+.menu{
+    width: 100%;
+    height: 100%;
+}
