@@ -59,14 +59,26 @@ body{
     height: 100%;
 }
 
-#optMenu1{
+#opt1Menu{
     background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    justify-self: center;
+    margin: 5px;
 }
 
-#optMenu2{
+#opt2Menu{
     display:none;
 }
 
-#optMenu3{
+#opt3Menu{
     display: none;
+}
+
+.gif{
+    width: 100%;
+    height: 100%;
 }
