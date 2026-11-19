@@ -25,6 +25,7 @@ body{
     justify-items: center;
     justify-self: center;
     transition: all 0.25s linear;
+    cursor: pointer;
 }
 .options:hover{
     transform: scale(1.5);
