@@ -36,6 +36,17 @@ menu.forEach(e=>{
     e.style.display = "none";
 });
 
+
+//function to play music 
+function haleyPlay(){
+    if(haley.play()){
+        console.log("I can't help falling in love with you. <3");
+    }
+    else{
+        haley.play();
+    }
+}
+
 //functions to display menu
 
 function display1(){
@@ -49,13 +60,8 @@ function display1(){
         opt1Menu.style.display = "block";
         opt1Menu.requestFullscreen();
         haley.currentTime = 0;
-        if(haley.play()){
-            console.log("awesome");
-        }
-        else{
-            haley.play();
-            setInterval(haley.play, 172000);
-        }
+        haleyPlay();
+        setInterval(haleyPlay, 174000);
     }
 }
 
