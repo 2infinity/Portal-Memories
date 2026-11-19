@@ -9,6 +9,8 @@ const opt3Menu = document.getElementById("opt3Menu");
 const opt1 = document.getElementById("opt1");
 const opt2 = document.getElementById("opt2");
 const opt3 = document.getElementById("opt3");
+const exitBtns = document.querySelectorAll(".exitBtn");
+const haley = document.getElementById("haley");
 
 
 //Time Function
@@ -29,10 +31,7 @@ setInterval(timeywimey,1000);
 // End of Time
 
 
-// gifs and menus hidden.
-gif.forEach(e=>{
-    e.style.display = "none";
-});
+// menus hidden.
 menu.forEach(e=>{
     e.style.display = "none";
 });
@@ -42,33 +41,43 @@ menu.forEach(e=>{
 function display1(){
     if(opt1Menu.style.display == "block"){
         opt1Menu.style.display = "none";
-        gif.forEach(e=>{
-            e.style.display = "none";
-        });
+        document.exitFullscreen();
+        haley.pause()
+        haley.currentTime = 0;
     }
     else{
         opt1Menu.style.display = "block";
-        gif.forEach(e=>{
-            e.style.display = "block";
-        });
+        opt1Menu.requestFullscreen();
+        haley.currentTime = 0;
+        if(haley.play()){
+            console.log("awesome");
+        }
+        else{
+            haley.play();
+            setInterval(haley.play, 172000);
+        }
     }
 }
 
 function display2(){
     if(opt2Menu.style.display == "block"){
         opt2Menu.style.display = "none";
+        document.exitFullscreen();
     }
     else{
         opt2Menu.style.display = "block";
+        opt2Menu.requestFullscreen();
     }
 }
 
 function display3(){
     if(opt3Menu.style.display == "block"){
         opt3Menu.style.display = "none";
+        document.exitFullscreen();
     }
     else{
         opt3Menu.style.display = "block";
+        opt3Menu.requestFullscreen();
     }
 }
 
@@ -77,3 +86,19 @@ function display3(){
 opt1.addEventListener("click", display1);
 opt2.addEventListener("click", display2);
 opt3.addEventListener("click", display3);
+
+//Exit Buttons to hide display
+
+exitBtns.forEach(e=>{
+    e.addEventListener("click", ()=>{
+        if(e.id=="exitBtn2"){
+            display2();
+        }
+        else if(e.id=="exitBtn3"){
+            display3();
+        }
+        else if(e.id=="exitBtn1"){
+            display1();
+        }
+    });
+});

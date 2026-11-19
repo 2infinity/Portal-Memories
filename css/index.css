@@ -3,7 +3,8 @@ body{
     color: cyan;
     text-align: center;
 }
-#timeContainer{
+
+.timeContainer{
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -58,9 +59,6 @@ body{
 .menu{
     width: 100%;
     height: 100%;
-}
-
-#opt1Menu{
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -72,15 +70,22 @@ body{
     
 }
 
-#opt2Menu{
-    display:none;
-}
-
-#opt3Menu{
-    display: none;
-}
-
 .gif{
     width: 100%;
     height: 100%;
+}
+
+.exitBtn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.time{
+
+    right: 5px;
+    bottom: 0px;
+
 }
